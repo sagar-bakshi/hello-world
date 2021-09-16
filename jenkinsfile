@@ -1,0 +1,18 @@
+pipeline{
+      agent any
+      stages{
+          stage('initialize'){
+              steps{
+                  sh '''
+                  echo "PATH=${PATH}"
+                  echo "JAVA_HOME=${JAVA_HOME}"
+                  '''
+              }
+          }
+         stage('build'){
+              steps{
+                  echo "hello world"
+              }
+         }
+      }
+}
