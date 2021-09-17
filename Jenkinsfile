@@ -13,30 +13,6 @@ pipeline{
                 }
             }
         }
-        stage('Deploy Build in staging area'){
-
-            steps{
-                build job : 'Deploy-StagingArea-Pipline'
-            }
-        }
-
-        stage('Deploy build in prodcution'){
-            steps{
-                timeout (time: 5, unit: 'DAYS'){
-                    input message: 'Approgitve Production Deployment'
-                }
-                build job : 'deploy_to_production_pipline'
-            }
-
-            post{
-                success{
-                    echo 'Deployment on Production successful'
-                }
-
-                failure{
-                    echo 'Deployement on Production Failure'
-                }
-            }
-        }
+     
     }
 }
