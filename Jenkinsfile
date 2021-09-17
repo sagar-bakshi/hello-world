@@ -25,7 +25,7 @@ pipeline{
                 timeout (time: 5, unit: 'DAYS'){
                     input message: 'Approgitve Production Deployment'
                 }
-                build job : ''
+                build job : 'deploy_to_production_pipline'
             }
 
             post{
