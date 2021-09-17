@@ -7,12 +7,12 @@ pipeline{
                   echo "PATH=${PATH}"
                   echo "JAVA_HOME=${JAVA_HOME}"
                   '''
-              }
-          }
+                }
+            }
          stage('build'){
               steps{
                   echo "hello world"
-              }
-         }
-      }
-}
+                }
+            }
+        } 
+    }
