@@ -14,14 +14,16 @@ pipeline{
             }
         }
         stage('Deploy Build in staging area'){
+
             steps{
-                Build job : 'Deploy-StagingArea-Pipline'
+                build job : 'Deploy-StagingArea-Pipline'
             }
         }
+
         stage('Deploy build in prodcution'){
             steps{
                 timeout (time: 5, unit: 'Days'){
-                    input message: 'Approve Production Deployment'
+                    input message: 'Approgitve Production Deployment'
                 }
                 build job : ''
             }
