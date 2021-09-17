@@ -22,7 +22,7 @@ pipeline{
 
         stage('Deploy build in prodcution'){
             steps{
-                timeout (time: 5, unit: 'Days'){
+                timeout (time: 5, unit: 'DAYS'){
                     input message: 'Approgitve Production Deployment'
                 }
                 build job : ''
